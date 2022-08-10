@@ -1,13 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=IBM+Plex+Sans:wght@600&family=Shadows+Into+Light&family=Viga&display=swap");
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Viga", sans-serif;
+  background-color: rgb(250, 240, 240);
+}
+.heading {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.carticon:hover {
+  color: rgb(9, 172, 9);
+}
+.category-page {
+  margin: 20px;
+}
+.product:hover {
+  background-image: linear-gradient(
+    to bottom,
+    rgb(245, 206, 206, 1) 0%,
+    rgb(187, 187, 187, 0) 35%,
+    rgb(187, 187, 187, 0) 50%,
+    rgb(245, 206, 206, 1) 100%
+  );
+  border-radius: 25px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.products {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+.product {
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.navbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px #cccc solid;
+  margin: 20px;
+}
+.links-conatiner {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 25px 25px 0px 25px;
+  margin: 10px 10px 0px 10px;
+}
+.links {
+  text-decoration: none;
+  width: 25%;
+}
+.link {
+  color: black;
+  font-family: "Alata", sans-serif;
+  font-size: 20px;
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.link:hover {
+  color: white;
+  background-color: black;
+  border-top-right-radius: 12px;
+  transition: 0.3s;
+}
+.change-page {
+  display: flex;
+  justify-content: center;
+}
+.arrows {
+  padding: 20px;
+  border: none;
+  margin: 10px 2px 10px 2px;
+  color: black;
+  background-color: rgb(248, 171, 171);
+}
+.title {
+  text-decoration: none;
+  font-family: "Shadows Into Light", cursive;
+  font-size: 42px;
+  color: black;
+}
+.arrows:hover {
+  background-color: black;
+  color: white;
+  transition: 0.3s;
+}
+.add-cart {
+  padding: 10px 25px 10px 25px;
+  border: none;
+  background-color: white;
+  color: black;
+  font-size: 25px;
+}
+.add-cart:hover {
+  background-color: rgb(9, 172, 9);
+  color: white;
+  transition: 0.3s;
+}
+.cart-products {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: flex-start;
+  border-bottom: 2px #cccc solid;
+  align-items: center;
+}
+.cart-products:hover {
+  background-color: #cccc;
+}
+.cart-img {
+  width: 100px;
+  height: 150px;
+  margin: 25px;
+}
+.product-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.loading {
+  display: flex;
+  justify-content: center;
+}
+.add-amount {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn {
+  border: none;
+  background-color: black;
+  padding: 10px;
+  margin: 10px;
+  color: white;
+  transition: 0.2s;
+}
+.minus:hover {
+  background-color: red;
+}
+.plus:hover {
+  background-color: green;
+}
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.home img {
+  width: 100%;
+}
+.home h1 {
+  z-index: 12;
+  position: absolute;
+  bottom: 50vh;
+  color: rgb(255, 197, 197);
+  font-size: 60px;
+  margin: auto;
+}
+.home button {
+  font-family: "Viga", sans-serif;
+  z-index: 12;
+  position: absolute;
+  bottom: 40vh;
+  color: white;
+  margin: auto;
+  padding: 20px;
+  background-color: rgb(255, 155, 155);
+  border: none;
+}
+.home-link {
+  color: rgba(255, 255, 255, 0.8);
 }
