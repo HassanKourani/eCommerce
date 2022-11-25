@@ -39,7 +39,7 @@ const CategoryPage = ({ db }) => {
         setProducts(response.results);
         //console.log(response);
       })
-      .catch((err) => console.error(err));
+      .catch((err) => {});
     const getdata = async () => {
       //get Cart collection  :
       const cartData = await getDocs(cartCollectionRef);
@@ -73,9 +73,7 @@ const CategoryPage = ({ db }) => {
 
       const docRef = doc(db, "cart", res[0].id);
 
-      updateDoc(docRef, { amount: res[0].amount + 1 }).then(() => {
-        console.log("added");
-      });
+      updateDoc(docRef, { amount: res[0].amount + 1 })
     } else {
       addDoc(cartCollectionRef, {
         title: product.name,
@@ -83,7 +81,6 @@ const CategoryPage = ({ db }) => {
         img: product.images[0].url,
         amount: 1,
       }).then(() => {
-        console.log("product add");
         window.location.reload();
       });
     }
